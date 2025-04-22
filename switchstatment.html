@@ -4,7 +4,8 @@
     <h1>Javascript Switch</h1>
     <p id="demo"></p>
     <script>
-        const currentTime = new Date().toLocaleTimeString();
+        const now = new Date();
+        const accurateDate = `${now.toLocaleDateString()} : ${now.toLocaleTimeString()}`;
         let day = "";
         switch (new Date().getDay()) {
             case 0:
@@ -30,7 +31,7 @@
                 break;
 
         }
-        document.getElementById("demo").innerHTML = "Today is " + `${day}: ${currentTime}`;
+        document.getElementById("demo").innerHTML = "Today is " + `${day}: ${accurateDate}`;
     </script>
 
 </body>
